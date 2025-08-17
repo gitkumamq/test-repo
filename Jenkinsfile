@@ -15,8 +15,6 @@ pipeline {
         }
 
         stage('Deploy') { // Defines a stage named 'Deploy'
-            when {
-                branch 'main' // This stage only runs when the branch is 'main'
             }
             steps {
                 sh 'echo "Deploying the application..."'
