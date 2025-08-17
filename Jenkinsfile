@@ -19,6 +19,12 @@ pipeline {
                 sh 'echo "Deploying the application..."'
             }
         }
+        stage('Consolidate Results') { // Defines a stage named 'Deploy'
+            steps {
+                input('Do you want to capture results?')
+                sh 'echo "Consolidating Results..."'
+            }
+        }
     }
 
     post { // Defines post-build actions
